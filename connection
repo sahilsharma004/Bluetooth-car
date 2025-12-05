@@ -1,0 +1,23 @@
+Motor Driver (L298N / L293D) to ESP32 & Motors
+| Component | ESP32 Pin | L298N/L293D Pin | Description                     |
+| --------- | --------- | --------------- | ------------------------------- |
+| ENA       | GPIO 13   | ENA             | PWM – Left Motor Speed Control  |
+| IN1       | GPIO 14   | IN1             | Motor A Direction               |
+| IN2       | GPIO 27   | IN2             | Motor A Direction               |
+| IN3       | GPIO 26   | IN3             | Motor B Direction               |
+| IN4       | GPIO 25   | IN4             | Motor B Direction               |
+| ENB       | GPIO 12   | ENB             | PWM – Right Motor Speed Control |
+
+Motors to Driver
+| Motor       | Driver Pins | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| Left Motor  | OUT1 & OUT2 | Connect left side motor terminals  |
+| Right Motor | OUT3 & OUT4 | Connect right side motor terminals |
+
+Power Supply Wiring
+| Power Component   | Driver Pin | Description                                   |
+| ----------------- | ---------- | --------------------------------------------- |
+| Battery + (6–12V) | +12V       | Power input for motors                        |
+| Battery –         | GND        | Common ground                                 |
+| 5V Output         | 5V         | Can power ESP32 (optional if using regulator) |
+| Ground            | GND        | Must connect ESP32 GND to Driver GND          |
